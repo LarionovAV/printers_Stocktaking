@@ -21,5 +21,10 @@ namespace printers_Stocktaking.View
         {
             Application.OpenForms["MainForm"].Show();
         }
+
+        private void AddCartBtn_Click(object sender, EventArgs e)
+        {
+            new NewCartridgeForm().ShowDialog();
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace printers_Stocktaking
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            
+            new ConnectionPropertiesForm().ShowDialog();
         }
     }
 }

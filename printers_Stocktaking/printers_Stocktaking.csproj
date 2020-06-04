@@ -55,17 +55,41 @@
     <Compile Include="View\CartrigesForm.designer.cs">
       <DependentUpon>CartrigesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConnectionPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConnectionPropertiesForm.designer.cs">
+      <DependentUpon>ConnectionPropertiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\NewCartridgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewCartridgeForm.Designer.cs">
+      <DependentUpon>NewCartridgeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewPrinterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewPrinterForm.Designer.cs">
+      <DependentUpon>NewPrinterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\NewValueForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\NewValueForm.designer.cs">
       <DependentUpon>NewValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OneCartridgeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OneCartridgeInfoForm.Designer.cs">
+      <DependentUpon>OneCartridgeInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\OnePrinterInfoForm.cs">
       <SubType>Form</SubType>
@@ -98,11 +122,23 @@
     <EmbeddedResource Include="View\CartrigesForm.resx">
       <DependentUpon>CartrigesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ConnectionPropertiesForm.resx">
+      <DependentUpon>ConnectionPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\NewCartridgeForm.resx">
+      <DependentUpon>NewCartridgeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewPrinterForm.resx">
+      <DependentUpon>NewPrinterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\NewValueForm.resx">
       <DependentUpon>NewValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OneCartridgeInfoForm.resx">
+      <DependentUpon>OneCartridgeInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OnePrinterInfoForm.resx">
       <DependentUpon>OnePrinterInfoForm.cs</DependentUpon>

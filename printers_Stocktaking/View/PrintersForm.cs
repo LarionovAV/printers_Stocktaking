@@ -26,5 +26,10 @@ namespace printers_Stocktaking.View
         {
             
         }
+
+        private void addPrinterBtn_Click(object sender, EventArgs e)
+        {
+            new NewPrinterForm().ShowDialog();
+        }
     }
 }

@@ -42,22 +42,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CreatorFilter = new System.Windows.Forms.ComboBox();
             this.SubmitFilterBtn = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.cabID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delCab = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.reloadListBtn = new System.Windows.Forms.PictureBox();
+            this.addPrinterBtn = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pageNumLabel = new System.Windows.Forms.Label();
@@ -70,9 +70,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadListBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPrinterBtn)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -145,7 +145,7 @@
             // 
             this.StateFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.StateFilter.FormattingEnabled = true;
-            this.StateFilter.Location = new System.Drawing.Point(0, 23);
+            this.StateFilter.Location = new System.Drawing.Point(0, 24);
             this.StateFilter.Margin = new System.Windows.Forms.Padding(0);
             this.StateFilter.Name = "StateFilter";
             this.StateFilter.Size = new System.Drawing.Size(194, 23);
@@ -183,7 +183,7 @@
             // 
             this.ModelFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ModelFilter.FormattingEnabled = true;
-            this.ModelFilter.Location = new System.Drawing.Point(0, 23);
+            this.ModelFilter.Location = new System.Drawing.Point(0, 24);
             this.ModelFilter.Margin = new System.Windows.Forms.Padding(0);
             this.ModelFilter.Name = "ModelFilter";
             this.ModelFilter.Size = new System.Drawing.Size(194, 23);
@@ -220,7 +220,7 @@
             // 
             this.CreatorFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CreatorFilter.FormattingEnabled = true;
-            this.CreatorFilter.Location = new System.Drawing.Point(0, 23);
+            this.CreatorFilter.Location = new System.Drawing.Point(0, 24);
             this.CreatorFilter.Margin = new System.Windows.Forms.Padding(0);
             this.CreatorFilter.Name = "CreatorFilter";
             this.CreatorFilter.Size = new System.Drawing.Size(194, 23);
@@ -237,6 +237,14 @@
             this.SubmitFilterBtn.TabIndex = 2;
             this.SubmitFilterBtn.Text = "Применить";
             this.SubmitFilterBtn.UseVisualStyleBackColor = false;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(188, 244);
+            this.treeView1.TabIndex = 4;
             // 
             // tableLayoutPanel6
             // 
@@ -285,65 +293,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(620, 332);
             this.dataGridView2.TabIndex = 7;
             // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 3;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
-            this.tableLayoutPanel7.Controls.Add(this.button6, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.comboBox1, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(626, 32);
-            this.tableLayoutPanel7.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button6.Location = new System.Drawing.Point(420, 4);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 24);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Найти";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Найти по инвентаризационному номеру",
-            "Найти по серийному номеру"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 23);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(251, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 32);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(82, 38);
-            this.panel1.TabIndex = 6;
-            // 
             // cabID
             // 
             this.cabID.HeaderText = "ID";
@@ -386,13 +335,89 @@
             this.delCab.ReadOnly = true;
             this.delCab.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // treeView1
+            // tableLayoutPanel7
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(3, 3);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(188, 244);
-            this.treeView1.TabIndex = 4;
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tableLayoutPanel7.Controls.Add(this.button6, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.comboBox1, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(626, 32);
+            this.tableLayoutPanel7.TabIndex = 5;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button6.Location = new System.Drawing.Point(420, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 24);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Найти";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Найти по инвентаризационному номеру",
+            "Найти по серийному номеру"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 5);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(242, 23);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(251, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(164, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.reloadListBtn);
+            this.panel1.Controls.Add(this.addPrinterBtn);
+            this.panel1.Location = new System.Drawing.Point(0, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(82, 38);
+            this.panel1.TabIndex = 6;
+            // 
+            // reloadListBtn
+            // 
+            this.reloadListBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.reloadListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reloadListBtn.Image = global::printers_Stocktaking.Properties.Resources.updateBtn;
+            this.reloadListBtn.Location = new System.Drawing.Point(43, 3);
+            this.reloadListBtn.Name = "reloadListBtn";
+            this.reloadListBtn.Size = new System.Drawing.Size(32, 32);
+            this.reloadListBtn.TabIndex = 0;
+            this.reloadListBtn.TabStop = false;
+            // 
+            // addPrinterBtn
+            // 
+            this.addPrinterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.addPrinterBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addPrinterBtn.Image = global::printers_Stocktaking.Properties.Resources.addBtn;
+            this.addPrinterBtn.Location = new System.Drawing.Point(5, 3);
+            this.addPrinterBtn.Name = "addPrinterBtn";
+            this.addPrinterBtn.Size = new System.Drawing.Size(32, 32);
+            this.addPrinterBtn.TabIndex = 0;
+            this.addPrinterBtn.TabStop = false;
+            this.addPrinterBtn.Click += new System.EventHandler(this.addPrinterBtn_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -411,30 +436,6 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(100, 32);
             this.tableLayoutPanel8.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::printers_Stocktaking.Properties.Resources.updateBtn;
-            this.pictureBox2.Location = new System.Drawing.Point(43, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::printers_Stocktaking.Properties.Resources.addBtn;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -496,10 +497,10 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reloadListBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPrinterBtn)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -526,8 +527,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox reloadListBtn;
+        private System.Windows.Forms.PictureBox addPrinterBtn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn cabID;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildName;
