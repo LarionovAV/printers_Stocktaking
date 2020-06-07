@@ -26,5 +26,17 @@ namespace printers_Stocktaking.View
         {
             new NewCartridgeForm().ShowDialog();
         }
+
+        private void CartrigesForm_Load(object sender, EventArgs e)
+        {
+            cartridgeTable.Rows.Add("-1", "Инв. номер", "Модель", "Состояние", "Подробнее");
+        }
+
+        private void cartridgeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == (sender as DataGridView).Columns["moreInfo"].Index) {
+                new OneCartridgeInfoForm().ShowDialog();
+            }
+        }
     }
 }

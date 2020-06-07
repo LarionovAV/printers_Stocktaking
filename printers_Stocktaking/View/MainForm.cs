@@ -1,4 +1,5 @@
-﻿using printers_Stocktaking.View;
+﻿using printers_Stocktaking.Model;
+using printers_Stocktaking.View;
 using System;
 using System.Windows.Forms;
 
@@ -25,7 +26,8 @@ namespace printers_Stocktaking
 
         private void PrintingVolumeBTN_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            new PrintingStatisticsForm().Show();
         }
 
         private void CartridgeBTN_Click(object sender, EventArgs e)
@@ -37,6 +39,17 @@ namespace printers_Stocktaking
         private void Settings_Click(object sender, EventArgs e)
         {
             new ConnectionPropertiesForm().ShowDialog();
+        }
+
+        private void UsingMatBTN_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new MatherialsForm().Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            CommonElements.Init();
         }
     }
 }

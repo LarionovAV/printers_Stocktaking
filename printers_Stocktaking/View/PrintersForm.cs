@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using printers_Stocktaking.Model;
+using System;
 using System.Windows.Forms;
 
 namespace printers_Stocktaking.View
@@ -24,12 +18,30 @@ namespace printers_Stocktaking.View
 
         private void PrintersForm_Load(object sender, EventArgs e)
         {
-            
+            searchMethod.Items.Add("Поиск по инвентаризационному номеру");
+            searchMethod.Items.Add("Поиск по серийному номеру");
+            searchMethod.SelectedIndex = 0;
+
+            depTree.Nodes.Add(CommonElements.DepTreeRoot);
+
+            printersTable.Rows.Add("-1", "Инв. Номер", "Модель", "Состояние", "Подробнее");
         }
 
         private void addPrinterBtn_Click(object sender, EventArgs e)
         {
             new NewPrinterForm().ShowDialog();
+        }
+
+        private void SubmitFilterBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printersTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == (sender as DataGridView).Columns["moreInfo"].Index) {
+                new OnePrinterInfoForm().ShowDialog();
+            }
         }
     }
 }

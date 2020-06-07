@@ -1,4 +1,5 @@
-﻿using System;
+﻿using printers_Stocktaking.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace printers_Stocktaking.View
         private void DepartmentForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.OpenForms["MainForm"].Show();
+        }
+
+        private void DepartmentForm_Load(object sender, EventArgs e)
+        {
+            depTree.Nodes.Add(CommonElements.DepTreeRoot);
         }
     }
 }

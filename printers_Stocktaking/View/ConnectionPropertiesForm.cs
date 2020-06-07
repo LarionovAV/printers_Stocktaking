@@ -19,7 +19,9 @@ namespace printers_Stocktaking
 
         private void ConnectionPropertiesForm_Load(object sender, EventArgs e)
         {
-            
+            AddressTB.Text = Properties.Settings.Default.DB_Address;
+            PortTB.Text = Properties.Settings.Default.DB_Port;
+            DbNameTB.Text = Properties.Settings.Default.DB_Name;
         }
     }
 }

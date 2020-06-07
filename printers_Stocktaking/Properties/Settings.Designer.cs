@@ -23,30 +23,39 @@ namespace printers_Stocktaking.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
-        public string DB__Address {
+        public string DB_Address {
             get {
-                return ((string)(this["DB__Address"]));
+                return ((string)(this["DB_Address"]));
+            }
+            set {
+                this["DB_Address"] = value;
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5432")]
         public string DB_Port {
             get {
                 return ((string)(this["DB_Port"]));
             }
+            set {
+                this["DB_Port"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Printers")]
         public string DB_Name {
             get {
                 return ((string)(this["DB_Name"]));
+            }
+            set {
+                this["DB_Name"] = value;
             }
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -40,16 +40,7 @@
             this.ModelFilter = new System.Windows.Forms.ComboBox();
             this.SubmitFilterBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pageNumLabel = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cabID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delCab = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.cartridgeTable = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -57,15 +48,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ReloadCartListBtn = new System.Windows.Forms.PictureBox();
             this.AddCartBtn = new System.Windows.Forms.PictureBox();
+            this.idCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invNumCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moreInfo = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartridgeTable)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReloadCartListBtn)).BeginInit();
@@ -197,142 +190,46 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView2, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.cartridgeTable, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(203, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 4;
+            this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 342F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(594, 444);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // tableLayoutPanel8
+            // cartridgeTable
             // 
-            this.tableLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel8.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.pictureBox4, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.pageNumLabel, 1, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 412);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(100, 32);
-            this.tableLayoutPanel8.TabIndex = 9;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::printers_Stocktaking.Properties.Resources.prevBtn;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::printers_Stocktaking.Properties.Resources.nextBtn;
-            this.pictureBox4.Location = new System.Drawing.Point(68, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pageNumLabel
-            // 
-            this.pageNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pageNumLabel.AutoSize = true;
-            this.pageNumLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pageNumLabel.Location = new System.Drawing.Point(32, 6);
-            this.pageNumLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.pageNumLabel.Name = "pageNumLabel";
-            this.pageNumLabel.Size = new System.Drawing.Size(36, 19);
-            this.pageNumLabel.TabIndex = 1;
-            this.pageNumLabel.Text = "стр";
-            this.pageNumLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cabID,
-            this.buildName,
+            this.cartridgeTable.AllowUserToAddRows = false;
+            this.cartridgeTable.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cartridgeTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cartridgeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cartridgeTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCol,
+            this.invNumCol,
             this.modelCol,
-            this.State,
-            this.delCab});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 73);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(588, 336);
-            this.dataGridView2.TabIndex = 7;
-            // 
-            // cabID
-            // 
-            this.cabID.HeaderText = "ID";
-            this.cabID.Name = "cabID";
-            this.cabID.ReadOnly = true;
-            this.cabID.Visible = false;
-            // 
-            // buildName
-            // 
-            this.buildName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.buildName.FillWeight = 40F;
-            this.buildName.HeaderText = "Инвентаризационный номер";
-            this.buildName.Name = "buildName";
-            this.buildName.ReadOnly = true;
-            // 
-            // modelCol
-            // 
-            this.modelCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.modelCol.FillWeight = 20F;
-            this.modelCol.HeaderText = "Модель";
-            this.modelCol.Name = "modelCol";
-            this.modelCol.ReadOnly = true;
-            // 
-            // State
-            // 
-            this.State.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.State.FillWeight = 20F;
-            this.State.HeaderText = "Состояние";
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            // 
-            // delCab
-            // 
-            this.delCab.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.delCab.DefaultCellStyle = dataGridViewCellStyle4;
-            this.delCab.FillWeight = 20F;
-            this.delCab.HeaderText = "";
-            this.delCab.Name = "delCab";
-            this.delCab.ReadOnly = true;
-            this.delCab.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.stateCol,
+            this.moreInfo});
+            this.cartridgeTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartridgeTable.Location = new System.Drawing.Point(3, 73);
+            this.cartridgeTable.Name = "cartridgeTable";
+            this.cartridgeTable.ReadOnly = true;
+            this.cartridgeTable.RowHeadersVisible = false;
+            this.cartridgeTable.Size = new System.Drawing.Size(588, 368);
+            this.cartridgeTable.TabIndex = 7;
+            this.cartridgeTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cartridgeTable_CellContentClick);
             // 
             // tableLayoutPanel7
             // 
@@ -416,6 +313,48 @@
             this.AddCartBtn.TabStop = false;
             this.AddCartBtn.Click += new System.EventHandler(this.AddCartBtn_Click);
             // 
+            // idCol
+            // 
+            this.idCol.HeaderText = "ID";
+            this.idCol.Name = "idCol";
+            this.idCol.ReadOnly = true;
+            this.idCol.Visible = false;
+            // 
+            // invNumCol
+            // 
+            this.invNumCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.invNumCol.FillWeight = 40F;
+            this.invNumCol.HeaderText = "Инвентаризационный номер";
+            this.invNumCol.Name = "invNumCol";
+            this.invNumCol.ReadOnly = true;
+            // 
+            // modelCol
+            // 
+            this.modelCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.modelCol.FillWeight = 20F;
+            this.modelCol.HeaderText = "Модель";
+            this.modelCol.Name = "modelCol";
+            this.modelCol.ReadOnly = true;
+            // 
+            // stateCol
+            // 
+            this.stateCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.stateCol.FillWeight = 20F;
+            this.stateCol.HeaderText = "Состояние";
+            this.stateCol.Name = "stateCol";
+            this.stateCol.ReadOnly = true;
+            // 
+            // moreInfo
+            // 
+            this.moreInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.moreInfo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.moreInfo.FillWeight = 20F;
+            this.moreInfo.HeaderText = "";
+            this.moreInfo.Name = "moreInfo";
+            this.moreInfo.ReadOnly = true;
+            this.moreInfo.VisitedLinkColor = System.Drawing.Color.Blue;
+            // 
             // CartrigesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,6 +367,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Картриджи";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CartrigesForm_FormClosed);
+            this.Load += new System.EventHandler(this.CartrigesForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -435,11 +375,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartridgeTable)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -461,22 +397,18 @@
         private System.Windows.Forms.ComboBox ModelFilter;
         private System.Windows.Forms.Button SubmitFilterBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView cartridgeTable;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox ReloadCartListBtn;
         private System.Windows.Forms.PictureBox AddCartBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cabID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn buildName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn State;
-        private System.Windows.Forms.DataGridViewLinkColumn delCab;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label pageNumLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invNumCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateCol;
+        private System.Windows.Forms.DataGridViewLinkColumn moreInfo;
     }
 }
