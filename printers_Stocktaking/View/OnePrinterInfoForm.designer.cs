@@ -48,76 +48,84 @@
             this.CloseBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.changeCartridgeLink = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.devType = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.invNum, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.serialNum, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.creatorLabel, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.modelLabel, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.placementLink, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.statementLink, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.showHistoryLimk, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.printingInfoLink, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.CloseBtn, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.changeCartridgeLink, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.creatorLabel, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.modelLabel, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.placementLink, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.statementLink, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.showHistoryLimk, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.printingInfoLink, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.CloseBtn, 1, 10);
+            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.changeCartridgeLink, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.devType, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowCount = 11;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(319, 398);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(425, 550);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Location = new System.Drawing.Point(4, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 26);
+            this.label1.Size = new System.Drawing.Size(173, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Инвентаризационный номер";
             // 
             // invNum
             // 
             this.invNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.invNum.Location = new System.Drawing.Point(139, 10);
+            this.invNum.Location = new System.Drawing.Point(185, 14);
+            this.invNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.invNum.Name = "invNum";
-            this.invNum.Size = new System.Drawing.Size(177, 20);
+            this.invNum.Size = new System.Drawing.Size(236, 22);
             this.invNum.TabIndex = 1;
             this.invNum.TextChanged += new System.EventHandler(this.invNum_TextChanged);
             // 
             // serialNum
             // 
             this.serialNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.serialNum.Location = new System.Drawing.Point(139, 50);
+            this.serialNum.Location = new System.Drawing.Point(185, 64);
+            this.serialNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.serialNum.Name = "serialNum";
-            this.serialNum.Size = new System.Drawing.Size(177, 20);
+            this.serialNum.Size = new System.Drawing.Size(236, 22);
             this.serialNum.TabIndex = 1;
             this.serialNum.TextChanged += new System.EventHandler(this.serialNum_TextChanged);
             // 
@@ -125,9 +133,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 53);
+            this.label2.Location = new System.Drawing.Point(4, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 13);
+            this.label2.Size = new System.Drawing.Size(173, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Серийный номер";
             // 
@@ -135,9 +144,10 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 93);
+            this.label3.Location = new System.Drawing.Point(4, 166);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 13);
+            this.label3.Size = new System.Drawing.Size(173, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Марка";
             // 
@@ -145,9 +155,10 @@
             // 
             this.creatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.creatorLabel.AutoSize = true;
-            this.creatorLabel.Location = new System.Drawing.Point(139, 93);
+            this.creatorLabel.Location = new System.Drawing.Point(185, 166);
+            this.creatorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.creatorLabel.Name = "creatorLabel";
-            this.creatorLabel.Size = new System.Drawing.Size(177, 13);
+            this.creatorLabel.Size = new System.Drawing.Size(236, 17);
             this.creatorLabel.TabIndex = 2;
             this.creatorLabel.Text = "[Марка]";
             // 
@@ -155,9 +166,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 133);
+            this.label5.Location = new System.Drawing.Point(4, 216);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 13);
+            this.label5.Size = new System.Drawing.Size(173, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "Модель";
             // 
@@ -165,9 +177,10 @@
             // 
             this.modelLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.modelLabel.AutoSize = true;
-            this.modelLabel.Location = new System.Drawing.Point(139, 133);
+            this.modelLabel.Location = new System.Drawing.Point(185, 216);
+            this.modelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.modelLabel.Name = "modelLabel";
-            this.modelLabel.Size = new System.Drawing.Size(177, 13);
+            this.modelLabel.Size = new System.Drawing.Size(236, 17);
             this.modelLabel.TabIndex = 2;
             this.modelLabel.Text = "Модель";
             // 
@@ -175,22 +188,24 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 173);
+            this.label4.Location = new System.Drawing.Point(4, 266);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 13);
+            this.label4.Size = new System.Drawing.Size(173, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Местонахождение";
+            this.label4.Text = "Расположение";
             // 
             // placementLink
             // 
             this.placementLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.placementLink.AutoSize = true;
-            this.placementLink.Location = new System.Drawing.Point(139, 173);
+            this.placementLink.Location = new System.Drawing.Point(185, 266);
+            this.placementLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.placementLink.Name = "placementLink";
-            this.placementLink.Size = new System.Drawing.Size(177, 13);
+            this.placementLink.Size = new System.Drawing.Size(236, 17);
             this.placementLink.TabIndex = 3;
             this.placementLink.TabStop = true;
-            this.placementLink.Text = "[Местонахождение]";
+            this.placementLink.Text = "[Расположение]";
             this.placementLink.VisitedLinkColor = System.Drawing.Color.Blue;
             this.placementLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.placementLink_LinkClicked);
             // 
@@ -198,9 +213,10 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 213);
+            this.label6.Location = new System.Drawing.Point(4, 316);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 13);
+            this.label6.Size = new System.Drawing.Size(173, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Состояние";
             // 
@@ -208,9 +224,10 @@
             // 
             this.statementLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.statementLink.AutoSize = true;
-            this.statementLink.Location = new System.Drawing.Point(139, 213);
+            this.statementLink.Location = new System.Drawing.Point(185, 316);
+            this.statementLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statementLink.Name = "statementLink";
-            this.statementLink.Size = new System.Drawing.Size(177, 13);
+            this.statementLink.Size = new System.Drawing.Size(236, 17);
             this.statementLink.TabIndex = 3;
             this.statementLink.TabStop = true;
             this.statementLink.Text = "[Состояние]";
@@ -221,9 +238,10 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 253);
+            this.label7.Location = new System.Drawing.Point(4, 366);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 13);
+            this.label7.Size = new System.Drawing.Size(173, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "История эксплуатации";
             // 
@@ -231,9 +249,10 @@
             // 
             this.showHistoryLimk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.showHistoryLimk.AutoSize = true;
-            this.showHistoryLimk.Location = new System.Drawing.Point(139, 253);
+            this.showHistoryLimk.Location = new System.Drawing.Point(185, 366);
+            this.showHistoryLimk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.showHistoryLimk.Name = "showHistoryLimk";
-            this.showHistoryLimk.Size = new System.Drawing.Size(177, 13);
+            this.showHistoryLimk.Size = new System.Drawing.Size(236, 17);
             this.showHistoryLimk.TabIndex = 3;
             this.showHistoryLimk.TabStop = true;
             this.showHistoryLimk.Text = "Показать историю";
@@ -244,9 +263,10 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 287);
+            this.label8.Location = new System.Drawing.Point(4, 408);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 26);
+            this.label8.Size = new System.Drawing.Size(173, 34);
             this.label8.TabIndex = 0;
             this.label8.Text = "Распечатано страниц (всего / месяц )";
             // 
@@ -254,9 +274,10 @@
             // 
             this.printingInfoLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.printingInfoLink.AutoSize = true;
-            this.printingInfoLink.Location = new System.Drawing.Point(139, 293);
+            this.printingInfoLink.Location = new System.Drawing.Point(185, 416);
+            this.printingInfoLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.printingInfoLink.Name = "printingInfoLink";
-            this.printingInfoLink.Size = new System.Drawing.Size(177, 13);
+            this.printingInfoLink.Size = new System.Drawing.Size(236, 17);
             this.printingInfoLink.TabIndex = 3;
             this.printingInfoLink.TabStop = true;
             this.printingInfoLink.Text = "[Всего / Месяц]";
@@ -268,10 +289,10 @@
             this.CloseBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.CloseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(251)))));
             this.CloseBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.CloseBtn.Location = new System.Drawing.Point(212, 362);
+            this.CloseBtn.Location = new System.Drawing.Point(282, 504);
             this.CloseBtn.Margin = new System.Windows.Forms.Padding(0);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(107, 34);
+            this.CloseBtn.Size = new System.Drawing.Size(143, 42);
             this.CloseBtn.TabIndex = 4;
             this.CloseBtn.Text = "Закрыть";
             this.CloseBtn.UseVisualStyleBackColor = false;
@@ -281,9 +302,10 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 333);
+            this.label9.Location = new System.Drawing.Point(4, 466);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 13);
+            this.label9.Size = new System.Drawing.Size(173, 17);
             this.label9.TabIndex = 0;
             this.label9.Text = "Картридж";
             // 
@@ -291,22 +313,46 @@
             // 
             this.changeCartridgeLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.changeCartridgeLink.AutoSize = true;
-            this.changeCartridgeLink.Location = new System.Drawing.Point(139, 333);
+            this.changeCartridgeLink.Location = new System.Drawing.Point(185, 466);
+            this.changeCartridgeLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.changeCartridgeLink.Name = "changeCartridgeLink";
-            this.changeCartridgeLink.Size = new System.Drawing.Size(177, 13);
+            this.changeCartridgeLink.Size = new System.Drawing.Size(236, 17);
             this.changeCartridgeLink.TabIndex = 3;
             this.changeCartridgeLink.TabStop = true;
             this.changeCartridgeLink.Text = "[Инвент. номер картриджа]";
             this.changeCartridgeLink.VisitedLinkColor = System.Drawing.Color.Blue;
             this.changeCartridgeLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.changeCartridgeLink_LinkClicked);
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 116);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(173, 17);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Тип устройства";
+            // 
+            // devType
+            // 
+            this.devType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.devType.AutoSize = true;
+            this.devType.Location = new System.Drawing.Point(185, 116);
+            this.devType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.devType.Name = "devType";
+            this.devType.Size = new System.Drawing.Size(236, 17);
+            this.devType.TabIndex = 0;
+            this.devType.Text = "Тип устройства";
+            // 
             // OnePrinterInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 398);
+            this.ClientSize = new System.Drawing.Size(425, 550);
             this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OnePrinterInfoForm";
@@ -340,5 +386,7 @@
         private System.Windows.Forms.LinkLabel printingInfoLink;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel changeCartridgeLink;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label devType;
     }
 }

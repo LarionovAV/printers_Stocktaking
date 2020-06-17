@@ -33,7 +33,7 @@
             this.AcceptBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ChoiceCabinet = new System.Windows.Forms.RadioButton();
+            this.SetCartridge = new System.Windows.Forms.RadioButton();
             this.TakeOffCartridge = new System.Windows.Forms.RadioButton();
             this.CartPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -91,6 +91,7 @@
             this.AcceptBtn.TabIndex = 0;
             this.AcceptBtn.Text = "Принять";
             this.AcceptBtn.UseVisualStyleBackColor = false;
+            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
             // 
             // CancelBtn
             // 
@@ -107,7 +108,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.ChoiceCabinet);
+            this.panel1.Controls.Add(this.SetCartridge);
             this.panel1.Controls.Add(this.TakeOffCartridge);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -116,17 +117,17 @@
             this.panel1.Size = new System.Drawing.Size(345, 40);
             this.panel1.TabIndex = 0;
             // 
-            // ChoiceCabinet
+            // SetCartridge
             // 
-            this.ChoiceCabinet.AutoSize = true;
-            this.ChoiceCabinet.Location = new System.Drawing.Point(131, 12);
-            this.ChoiceCabinet.Name = "ChoiceCabinet";
-            this.ChoiceCabinet.Size = new System.Drawing.Size(143, 19);
-            this.ChoiceCabinet.TabIndex = 1;
-            this.ChoiceCabinet.TabStop = true;
-            this.ChoiceCabinet.Text = "Установить картридж";
-            this.ChoiceCabinet.UseVisualStyleBackColor = true;
-            this.ChoiceCabinet.CheckedChanged += new System.EventHandler(this.ChoiceCabinet_CheckedChanged);
+            this.SetCartridge.AutoSize = true;
+            this.SetCartridge.Location = new System.Drawing.Point(131, 12);
+            this.SetCartridge.Name = "SetCartridge";
+            this.SetCartridge.Size = new System.Drawing.Size(143, 19);
+            this.SetCartridge.TabIndex = 1;
+            this.SetCartridge.TabStop = true;
+            this.SetCartridge.Text = "Установить картридж";
+            this.SetCartridge.UseVisualStyleBackColor = true;
+            this.SetCartridge.CheckedChanged += new System.EventHandler(this.ChoiceCabinet_CheckedChanged);
             // 
             // TakeOffCartridge
             // 
@@ -171,7 +172,7 @@
             // 
             this.cartridgeInvNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cartridgeInvNum.FormattingEnabled = true;
-            this.cartridgeInvNum.Location = new System.Drawing.Point(129, 8);
+            this.cartridgeInvNum.Location = new System.Drawing.Point(129, 9);
             this.cartridgeInvNum.Name = "cartridgeInvNum";
             this.cartridgeInvNum.Size = new System.Drawing.Size(213, 23);
             this.cartridgeInvNum.TabIndex = 1;
@@ -205,7 +206,7 @@
         private System.Windows.Forms.Button AcceptBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton ChoiceCabinet;
+        private System.Windows.Forms.RadioButton SetCartridge;
         private System.Windows.Forms.RadioButton TakeOffCartridge;
         private System.Windows.Forms.TableLayoutPanel CartPanel;
         private System.Windows.Forms.Label label1;

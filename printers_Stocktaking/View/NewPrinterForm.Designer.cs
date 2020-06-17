@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.invNum = new System.Windows.Forms.TextBox();
             this.serialNum = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.creator = new System.Windows.Forms.ComboBox();
@@ -46,6 +45,7 @@
             this.buyDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.printerType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +98,7 @@
             this.tableLayoutPanel4.Controls.Add(this.CancelBtn, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 282);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -117,6 +117,7 @@
             this.AcceptBtn.TabIndex = 0;
             this.AcceptBtn.Text = "Принять";
             this.AcceptBtn.UseVisualStyleBackColor = false;
+            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
             // 
             // CancelBtn
             // 
@@ -157,16 +158,6 @@
             this.serialNum.Size = new System.Drawing.Size(158, 22);
             this.serialNum.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Серийный номер";
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -195,6 +186,7 @@
             this.creator.Name = "creator";
             this.creator.Size = new System.Drawing.Size(158, 23);
             this.creator.TabIndex = 5;
+            this.creator.SelectedIndexChanged += new System.EventHandler(this.creator_SelectedIndexChanged);
             // 
             // model
             // 
@@ -204,6 +196,7 @@
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(158, 23);
             this.model.TabIndex = 6;
+            this.model.SelectedIndexChanged += new System.EventHandler(this.model_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -259,6 +252,17 @@
             this.printerType.Name = "printerType";
             this.printerType.Size = new System.Drawing.Size(158, 23);
             this.printerType.TabIndex = 5;
+            this.printerType.SelectedIndexChanged += new System.EventHandler(this.printerType_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Серийный номер";
             // 
             // NewPrinterForm
             // 
@@ -272,6 +276,7 @@
             this.Name = "NewPrinterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Новое устройство";
+            this.Load += new System.EventHandler(this.NewPrinterForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);

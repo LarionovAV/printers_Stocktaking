@@ -44,7 +44,7 @@ namespace printers_Stocktaking
         private void UsingMatBTN_Click(object sender, EventArgs e)
         {
             Hide();
-            new MatherialsForm().Show();
+            new MaterialsForm().Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

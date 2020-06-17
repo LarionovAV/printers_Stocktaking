@@ -20,6 +20,7 @@ namespace printers_Stocktaking.View
 
         private void PrintingStatisticsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            department.Nodes.Clear();
             Application.OpenForms["MainForm"].Show();
         }
 

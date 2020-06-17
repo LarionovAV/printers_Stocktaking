@@ -1,6 +1,6 @@
 ﻿namespace printers_Stocktaking.View
 {
-    partial class NewMatherialFom
+    partial class NewMaterialForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.matName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.AcceptBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.matName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.mesure = new System.Windows.Forms.ComboBox();
+            this.measure = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -59,15 +59,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(486, 92);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // matName
-            // 
-            this.matName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.matName.Location = new System.Drawing.Point(77, 10);
-            this.matName.Margin = new System.Windows.Forms.Padding(8);
-            this.matName.Name = "matName";
-            this.matName.Size = new System.Drawing.Size(201, 23);
-            this.matName.TabIndex = 0;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
@@ -81,7 +72,7 @@
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(482, 38);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -97,6 +88,7 @@
             this.AcceptBtn.TabIndex = 0;
             this.AcceptBtn.Text = "Принять";
             this.AcceptBtn.UseVisualStyleBackColor = false;
+            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
             // 
             // CancelBtn
             // 
@@ -121,14 +113,23 @@
             this.tableLayoutPanel3.Controls.Add(this.matName, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.mesure, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.measure, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(480, 44);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // matName
+            // 
+            this.matName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.matName.Location = new System.Drawing.Point(77, 10);
+            this.matName.Margin = new System.Windows.Forms.Padding(8);
+            this.matName.Name = "matName";
+            this.matName.Size = new System.Drawing.Size(201, 23);
+            this.matName.TabIndex = 0;
             // 
             // label1
             // 
@@ -150,16 +151,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Единица измерения";
             // 
-            // mesure
+            // measure
             // 
-            this.mesure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mesure.FormattingEnabled = true;
-            this.mesure.Location = new System.Drawing.Point(370, 11);
-            this.mesure.Name = "mesure";
-            this.mesure.Size = new System.Drawing.Size(107, 24);
-            this.mesure.TabIndex = 2;
+            this.measure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.measure.FormattingEnabled = true;
+            this.measure.Location = new System.Drawing.Point(370, 10);
+            this.measure.Name = "measure";
+            this.measure.Size = new System.Drawing.Size(107, 24);
+            this.measure.TabIndex = 2;
             // 
-            // NewMatherialFom
+            // NewMaterialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +169,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "NewMatherialFom";
+            this.Name = "NewMaterialForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Новый материал";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -189,6 +190,6 @@
         private System.Windows.Forms.TextBox matName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox mesure;
+        private System.Windows.Forms.ComboBox measure;
     }
 }

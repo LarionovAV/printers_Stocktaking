@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.AcceptBtn = new System.Windows.Forms.Button();
@@ -38,18 +38,19 @@
             this.FinishBtn = new System.Windows.Forms.Button();
             this.AddRequireBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.matList = new System.Windows.Forms.DataGridView();
+            this.IDcol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.quantityCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.measureCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.total = new System.Windows.Forms.Label();
-            this.IDcol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.quantityCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mesure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matList)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.matList, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -106,6 +107,7 @@
             this.AcceptBtn.TabIndex = 0;
             this.AcceptBtn.Text = "Сохранить";
             this.AcceptBtn.UseVisualStyleBackColor = false;
+            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
             // 
             // CancelBtn
             // 
@@ -132,6 +134,7 @@
             this.FinishBtn.TabIndex = 5;
             this.FinishBtn.Text = "Завершить закупку";
             this.FinishBtn.UseVisualStyleBackColor = false;
+            this.FinishBtn.Click += new System.EventHandler(this.FinishBtn_Click);
             // 
             // AddRequireBtn
             // 
@@ -156,31 +159,83 @@
             this.DeleteBtn.TabIndex = 6;
             this.DeleteBtn.Text = "Удалить";
             this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // dataGridView1
+            // matList
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.matList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.matList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.matList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.matList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.matList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDcol,
+            this.ActionCol,
             this.MatCol,
             this.quantityCol,
-            this.Mesure,
+            this.measureCol,
             this.totalCol});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(485, 340);
-            this.dataGridView1.TabIndex = 0;
+            this.matList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matList.Location = new System.Drawing.Point(3, 3);
+            this.matList.Name = "matList";
+            this.matList.RowHeadersVisible = false;
+            this.matList.Size = new System.Drawing.Size(485, 340);
+            this.matList.TabIndex = 0;
+            this.matList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.matList_CellMouseDoubleClick);
+            this.matList.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            this.matList.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.matList_RowsRemoved);
+            this.matList.SelectionChanged += new System.EventHandler(this.matList_SelectionChanged);
+            // 
+            // IDcol
+            // 
+            this.IDcol.HeaderText = "ID";
+            this.IDcol.Name = "IDcol";
+            this.IDcol.Visible = false;
+            // 
+            // ActionCol
+            // 
+            this.ActionCol.FillWeight = 20.30457F;
+            this.ActionCol.HeaderText = "";
+            this.ActionCol.Name = "ActionCol";
+            this.ActionCol.ReadOnly = true;
+            // 
+            // MatCol
+            // 
+            this.MatCol.FillWeight = 80.86295F;
+            this.MatCol.HeaderText = "Материал";
+            this.MatCol.Name = "MatCol";
+            this.MatCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MatCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // quantityCol
+            // 
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = null;
+            this.quantityCol.DefaultCellStyle = dataGridViewCellStyle5;
+            this.quantityCol.FillWeight = 35.93909F;
+            this.quantityCol.HeaderText = "Количество";
+            this.quantityCol.Name = "quantityCol";
+            // 
+            // measureCol
+            // 
+            this.measureCol.FillWeight = 17.96954F;
+            this.measureCol.HeaderText = "Ед. изм.";
+            this.measureCol.Name = "measureCol";
+            this.measureCol.ReadOnly = true;
+            // 
+            // totalCol
+            // 
+            dataGridViewCellStyle6.NullValue = null;
+            this.totalCol.DefaultCellStyle = dataGridViewCellStyle6;
+            this.totalCol.FillWeight = 44.92386F;
+            this.totalCol.HeaderText = "Стоимость";
+            this.totalCol.Name = "totalCol";
             // 
             // tableLayoutPanel3
             // 
@@ -220,45 +275,6 @@
             this.total.Text = "[Сумма]";
             this.total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // IDcol
-            // 
-            this.IDcol.HeaderText = "ID";
-            this.IDcol.Name = "IDcol";
-            this.IDcol.Visible = false;
-            // 
-            // MatCol
-            // 
-            this.MatCol.FillWeight = 45F;
-            this.MatCol.HeaderText = "Материал";
-            this.MatCol.Name = "MatCol";
-            this.MatCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MatCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // quantityCol
-            // 
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.quantityCol.DefaultCellStyle = dataGridViewCellStyle2;
-            this.quantityCol.FillWeight = 20F;
-            this.quantityCol.HeaderText = "Количество";
-            this.quantityCol.Name = "quantityCol";
-            // 
-            // Mesure
-            // 
-            this.Mesure.FillWeight = 10F;
-            this.Mesure.HeaderText = "Ед. изм.";
-            this.Mesure.Name = "Mesure";
-            this.Mesure.ReadOnly = true;
-            // 
-            // totalCol
-            // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.totalCol.DefaultCellStyle = dataGridViewCellStyle3;
-            this.totalCol.FillWeight = 25F;
-            this.totalCol.HeaderText = "Стоимость";
-            this.totalCol.Name = "totalCol";
-            // 
             // NotDoneActForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,9 +287,10 @@
             this.Name = "NotDoneActForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Закупаемые материалы";
+            this.Load += new System.EventHandler(this.NotDoneActForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matList)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
@@ -283,7 +300,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView matList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button AcceptBtn;
         private System.Windows.Forms.Button CancelBtn;
@@ -294,9 +311,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDcol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActionCol;
         private System.Windows.Forms.DataGridViewComboBoxColumn MatCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mesure;
+        private System.Windows.Forms.DataGridViewTextBoxColumn measureCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalCol;
     }
 }

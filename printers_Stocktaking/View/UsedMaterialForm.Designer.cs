@@ -1,6 +1,6 @@
 ﻿namespace printers_Stocktaking.View
 {
-    partial class UsedMatherialForm
+    partial class UsedMaterialForm
     {
         /// <summary>
         /// Required designer variable.
@@ -83,7 +83,7 @@
             this.quantityCol.Name = "quantityCol";
             this.quantityCol.ReadOnly = true;
             // 
-            // UsedMatherialForm
+            // UsedMaterialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +92,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "UsedMatherialForm";
+            this.Name = "UsedMaterialForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Использованные материалы";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

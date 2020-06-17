@@ -44,14 +44,16 @@
             this.CancelDepBtn = new System.Windows.Forms.Button();
             this.childDepTable = new System.Windows.Forms.DataGridView();
             this.depIDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cabinets = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.AcceptCabBtn = new System.Windows.Forms.Button();
             this.CancelCabBtn = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.cabinetsTable = new System.Windows.Forms.DataGridView();
             this.cabIDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cabAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buildNameCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.cabNumCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Buildings = new System.Windows.Forms.TabPage();
@@ -59,8 +61,9 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.AcceptBuildBtn = new System.Windows.Forms.Button();
             this.CancelBuildBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buildingsTable = new System.Windows.Forms.DataGridView();
             this.buildIDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bShortNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
@@ -74,11 +77,11 @@
             this.Cabinets.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabinetsTable)).BeginInit();
             this.Buildings.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -124,11 +127,13 @@
             // depTree
             // 
             this.depTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.depTree.HideSelection = false;
             this.depTree.Location = new System.Drawing.Point(2, 2);
             this.depTree.Margin = new System.Windows.Forms.Padding(2);
             this.depTree.Name = "depTree";
             this.depTree.Size = new System.Drawing.Size(173, 400);
             this.depTree.TabIndex = 0;
+            this.depTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.depTree_AfterSelect);
             // 
             // tabControl2
             // 
@@ -198,6 +203,7 @@
             this.AcceptDepBtn.TabIndex = 0;
             this.AcceptDepBtn.Text = "Принять";
             this.AcceptDepBtn.UseVisualStyleBackColor = false;
+            this.AcceptDepBtn.Click += new System.EventHandler(this.AcceptDepBtn_Click);
             // 
             // CancelDepBtn
             // 
@@ -211,6 +217,7 @@
             this.CancelDepBtn.TabIndex = 0;
             this.CancelDepBtn.Text = "Отмена";
             this.CancelDepBtn.UseVisualStyleBackColor = false;
+            this.CancelDepBtn.Click += new System.EventHandler(this.CancelDepBtn_Click);
             // 
             // childDepTable
             // 
@@ -225,10 +232,12 @@
             this.childDepTable.ColumnHeadersHeight = 29;
             this.childDepTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.depIDCol,
+            this.depAction,
             this.depNameCol});
             this.childDepTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.childDepTable.Location = new System.Drawing.Point(2, 2);
             this.childDepTable.Margin = new System.Windows.Forms.Padding(2);
+            this.childDepTable.MultiSelect = false;
             this.childDepTable.Name = "childDepTable";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -238,23 +247,36 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.childDepTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.childDepTable.RowHeadersVisible = false;
             this.childDepTable.RowHeadersWidth = 51;
             this.childDepTable.RowTemplate.Height = 24;
             this.childDepTable.Size = new System.Drawing.Size(408, 331);
             this.childDepTable.TabIndex = 1;
+            this.childDepTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.childDepTable_CellDoubleClick);
+            this.childDepTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.childDepTable_CellValueChanged);
+            this.childDepTable.SelectionChanged += new System.EventHandler(this.childDepTable_SelectionChanged);
             // 
             // depIDCol
             // 
+            this.depIDCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.depIDCol.HeaderText = "ID";
             this.depIDCol.MinimumWidth = 6;
             this.depIDCol.Name = "depIDCol";
             this.depIDCol.Visible = false;
-            this.depIDCol.Width = 125;
+            this.depIDCol.Width = 20;
+            // 
+            // depAction
+            // 
+            this.depAction.FillWeight = 5F;
+            this.depAction.HeaderText = "";
+            this.depAction.Name = "depAction";
+            this.depAction.ReadOnly = true;
+            this.depAction.Width = 20;
             // 
             // depNameCol
             // 
             this.depNameCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.depNameCol.FillWeight = 70F;
+            this.depNameCol.FillWeight = 95F;
             this.depNameCol.HeaderText = "Название";
             this.depNameCol.MinimumWidth = 6;
             this.depNameCol.Name = "depNameCol";
@@ -275,7 +297,7 @@
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 406F));
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.dataGridView2, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.cabinetsTable, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -314,6 +336,7 @@
             this.AcceptCabBtn.TabIndex = 0;
             this.AcceptCabBtn.Text = "Принять";
             this.AcceptCabBtn.UseVisualStyleBackColor = false;
+            this.AcceptCabBtn.Click += new System.EventHandler(this.AcceptCabBtn_Click);
             // 
             // CancelCabBtn
             // 
@@ -327,8 +350,9 @@
             this.CancelCabBtn.TabIndex = 0;
             this.CancelCabBtn.Text = "Отмена";
             this.CancelCabBtn.UseVisualStyleBackColor = false;
+            this.CancelCabBtn.Click += new System.EventHandler(this.CancelCabBtn_Click);
             // 
-            // dataGridView2
+            // cabinetsTable
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -337,23 +361,35 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cabinetsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.cabinetsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cabinetsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cabIDCol,
+            this.cabAction,
             this.buildNameCol,
             this.cabNumCol});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(400, 318);
-            this.dataGridView2.TabIndex = 5;
+            this.cabinetsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabinetsTable.Location = new System.Drawing.Point(3, 3);
+            this.cabinetsTable.Name = "cabinetsTable";
+            this.cabinetsTable.RowHeadersVisible = false;
+            this.cabinetsTable.Size = new System.Drawing.Size(400, 318);
+            this.cabinetsTable.TabIndex = 5;
+            this.cabinetsTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cabinetsTable_CellDoubleClick);
+            this.cabinetsTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cabinetsTable_CellValueChanged);
+            this.cabinetsTable.SelectionChanged += new System.EventHandler(this.cabinetsTable_SelectionChanged);
             // 
             // cabIDCol
             // 
             this.cabIDCol.HeaderText = "ID";
             this.cabIDCol.Name = "cabIDCol";
             this.cabIDCol.Visible = false;
+            // 
+            // cabAction
+            // 
+            this.cabAction.HeaderText = "";
+            this.cabAction.Name = "cabAction";
+            this.cabAction.ReadOnly = true;
+            this.cabAction.Width = 20;
             // 
             // buildNameCol
             // 
@@ -387,7 +423,7 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.buildingsTable, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -427,6 +463,7 @@
             this.AcceptBuildBtn.TabIndex = 0;
             this.AcceptBuildBtn.Text = "Принять";
             this.AcceptBuildBtn.UseVisualStyleBackColor = false;
+            this.AcceptBuildBtn.Click += new System.EventHandler(this.AcceptBuildBtn_Click);
             // 
             // CancelBuildBtn
             // 
@@ -440,10 +477,11 @@
             this.CancelBuildBtn.TabIndex = 0;
             this.CancelBuildBtn.Text = "Отмена";
             this.CancelBuildBtn.UseVisualStyleBackColor = false;
+            this.CancelBuildBtn.Click += new System.EventHandler(this.CancelBuildBtn_Click);
             // 
-            // dataGridView1
+            // buildingsTable
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buildingsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -453,22 +491,33 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.buildingsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.buildingsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buildingsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buildIDCol,
+            this.buildAction,
             this.bNameCol,
             this.bShortNameCol});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(591, 348);
-            this.dataGridView1.TabIndex = 5;
+            this.buildingsTable.Location = new System.Drawing.Point(3, 3);
+            this.buildingsTable.Name = "buildingsTable";
+            this.buildingsTable.RowHeadersVisible = false;
+            this.buildingsTable.Size = new System.Drawing.Size(591, 348);
+            this.buildingsTable.TabIndex = 5;
+            this.buildingsTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.buildingsTable_CellDoubleClick);
+            this.buildingsTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.buildingsTable_CellValueChanged);
+            this.buildingsTable.SelectionChanged += new System.EventHandler(this.buildingsTable_SelectionChanged);
             // 
             // buildIDCol
             // 
-            this.buildIDCol.HeaderText = "";
+            this.buildIDCol.HeaderText = "ID";
             this.buildIDCol.Name = "buildIDCol";
             this.buildIDCol.Visible = false;
+            // 
+            // buildAction
+            // 
+            this.buildAction.HeaderText = "";
+            this.buildAction.Name = "buildAction";
+            this.buildAction.Width = 20;
             // 
             // bNameCol
             // 
@@ -510,11 +559,11 @@
             this.Cabinets.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabinetsTable)).EndInit();
             this.Buildings.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingsTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,15 +591,18 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button AcceptCabBtn;
         private System.Windows.Forms.Button CancelCabBtn;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView cabinetsTable;
+        private System.Windows.Forms.DataGridView buildingsTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn depIDCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depAction;
         private System.Windows.Forms.DataGridViewTextBoxColumn depNameCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cabIDCol;
-        private System.Windows.Forms.DataGridViewComboBoxColumn buildNameCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cabNumCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildIDCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buildAction;
         private System.Windows.Forms.DataGridViewTextBoxColumn bNameCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn bShortNameCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cabIDCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cabAction;
+        private System.Windows.Forms.DataGridViewComboBoxColumn buildNameCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cabNumCol;
     }
 }

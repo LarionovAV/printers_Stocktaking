@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,6 +45,11 @@
             this.depTree = new System.Windows.Forms.TreeView();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.printersTable = new System.Windows.Forms.DataGridView();
+            this.printID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moreInfo = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
             this.searchMethod = new System.Windows.Forms.ComboBox();
@@ -52,11 +57,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.reloadListBtn = new System.Windows.Forms.PictureBox();
             this.addPrinterBtn = new System.Windows.Forms.PictureBox();
-            this.cabID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moreInfo = new System.Windows.Forms.DataGridViewLinkColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -218,6 +218,7 @@
             this.CreatorFilter.Name = "CreatorFilter";
             this.CreatorFilter.Size = new System.Drawing.Size(194, 23);
             this.CreatorFilter.TabIndex = 1;
+            this.CreatorFilter.SelectedIndexChanged += new System.EventHandler(this.CreatorFilter_SelectedIndexChanged);
             // 
             // SubmitFilterBtn
             // 
@@ -235,6 +236,7 @@
             // depTree
             // 
             this.depTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.depTree.HideSelection = false;
             this.depTree.Location = new System.Drawing.Point(3, 3);
             this.depTree.Name = "depTree";
             this.depTree.Size = new System.Drawing.Size(188, 244);
@@ -262,17 +264,17 @@
             // 
             this.printersTable.AllowUserToAddRows = false;
             this.printersTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.printersTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.printersTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.printersTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.printersTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cabID,
+            this.printID,
             this.buildName,
             this.cabNum,
             this.State,
@@ -282,9 +284,58 @@
             this.printersTable.Name = "printersTable";
             this.printersTable.ReadOnly = true;
             this.printersTable.RowHeadersVisible = false;
+            this.printersTable.RowHeadersWidth = 51;
             this.printersTable.Size = new System.Drawing.Size(620, 368);
             this.printersTable.TabIndex = 7;
             this.printersTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.printersTable_CellContentClick);
+            // 
+            // printID
+            // 
+            this.printID.HeaderText = "ID";
+            this.printID.MinimumWidth = 6;
+            this.printID.Name = "printID";
+            this.printID.ReadOnly = true;
+            this.printID.Visible = false;
+            this.printID.Width = 125;
+            // 
+            // buildName
+            // 
+            this.buildName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.buildName.FillWeight = 35F;
+            this.buildName.HeaderText = "Инвентаризационный номер";
+            this.buildName.MinimumWidth = 6;
+            this.buildName.Name = "buildName";
+            this.buildName.ReadOnly = true;
+            // 
+            // cabNum
+            // 
+            this.cabNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cabNum.FillWeight = 35F;
+            this.cabNum.HeaderText = "Место установки";
+            this.cabNum.MinimumWidth = 6;
+            this.cabNum.Name = "cabNum";
+            this.cabNum.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.State.FillWeight = 15F;
+            this.State.HeaderText = "Состояние";
+            this.State.MinimumWidth = 6;
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            // 
+            // moreInfo
+            // 
+            this.moreInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.moreInfo.DefaultCellStyle = dataGridViewCellStyle8;
+            this.moreInfo.FillWeight = 15F;
+            this.moreInfo.HeaderText = "";
+            this.moreInfo.MinimumWidth = 6;
+            this.moreInfo.Name = "moreInfo";
+            this.moreInfo.ReadOnly = true;
+            this.moreInfo.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // tableLayoutPanel7
             // 
@@ -308,12 +359,13 @@
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button6.Location = new System.Drawing.Point(474, 4);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 24);
             this.button6.TabIndex = 4;
             this.button6.Text = "Найти";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // searchMethod
             // 
@@ -353,6 +405,7 @@
             this.reloadListBtn.Size = new System.Drawing.Size(32, 32);
             this.reloadListBtn.TabIndex = 0;
             this.reloadListBtn.TabStop = false;
+            this.reloadListBtn.Click += new System.EventHandler(this.reloadListBtn_Click);
             // 
             // addPrinterBtn
             // 
@@ -366,48 +419,6 @@
             this.addPrinterBtn.TabIndex = 0;
             this.addPrinterBtn.TabStop = false;
             this.addPrinterBtn.Click += new System.EventHandler(this.addPrinterBtn_Click);
-            // 
-            // cabID
-            // 
-            this.cabID.HeaderText = "ID";
-            this.cabID.Name = "cabID";
-            this.cabID.ReadOnly = true;
-            this.cabID.Visible = false;
-            // 
-            // buildName
-            // 
-            this.buildName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.buildName.FillWeight = 35F;
-            this.buildName.HeaderText = "Инвентаризационный номер";
-            this.buildName.Name = "buildName";
-            this.buildName.ReadOnly = true;
-            // 
-            // cabNum
-            // 
-            this.cabNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cabNum.FillWeight = 35F;
-            this.cabNum.HeaderText = "Место установки";
-            this.cabNum.Name = "cabNum";
-            this.cabNum.ReadOnly = true;
-            // 
-            // State
-            // 
-            this.State.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.State.FillWeight = 15F;
-            this.State.HeaderText = "Состояние";
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            // 
-            // moreInfo
-            // 
-            this.moreInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.moreInfo.DefaultCellStyle = dataGridViewCellStyle2;
-            this.moreInfo.FillWeight = 15F;
-            this.moreInfo.HeaderText = "";
-            this.moreInfo.Name = "moreInfo";
-            this.moreInfo.ReadOnly = true;
-            this.moreInfo.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // PrintersForm
             // 
@@ -464,7 +475,7 @@
         private System.Windows.Forms.PictureBox addPrinterBtn;
         private System.Windows.Forms.DataGridView printersTable;
         private System.Windows.Forms.TreeView depTree;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cabID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printID;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cabNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn State;

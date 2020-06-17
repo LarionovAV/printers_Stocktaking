@@ -19,10 +19,18 @@ namespace printers_Stocktaking.View
             InitializeComponent();
             value = val;
         }
-
+        public NewValueForm(StringReference val, string formNameSuffix) : this(val)
+        {
+            Text += " | " + formNameSuffix;
+        }
         private void AcceptBtn_Click(object sender, EventArgs e)
         {
             value.Value = newValue.Text;
+        }
+
+        private void NewValueForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
