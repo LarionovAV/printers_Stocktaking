@@ -56,7 +56,7 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -125,7 +125,7 @@
             // 
             this.ChoiceCabinet.AutoSize = true;
             this.ChoiceCabinet.Location = new System.Drawing.Point(123, 15);
-            this.ChoiceCabinet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChoiceCabinet.Margin = new System.Windows.Forms.Padding(4);
             this.ChoiceCabinet.Name = "ChoiceCabinet";
             this.ChoiceCabinet.Size = new System.Drawing.Size(150, 23);
             this.ChoiceCabinet.TabIndex = 1;
@@ -139,7 +139,7 @@
             this.ToStorage.AutoSize = true;
             this.ToStorage.Checked = true;
             this.ToStorage.Location = new System.Drawing.Point(16, 15);
-            this.ToStorage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ToStorage.Margin = new System.Windows.Forms.Padding(4);
             this.ToStorage.Name = "ToStorage";
             this.ToStorage.Size = new System.Drawing.Size(93, 23);
             this.ToStorage.TabIndex = 0;
@@ -183,8 +183,8 @@
             // 
             this.building.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.building.FormattingEnabled = true;
-            this.building.Location = new System.Drawing.Point(79, 11);
-            this.building.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.building.Location = new System.Drawing.Point(79, 12);
+            this.building.Margin = new System.Windows.Forms.Padding(4);
             this.building.Name = "building";
             this.building.Size = new System.Drawing.Size(165, 27);
             this.building.TabIndex = 1;
@@ -204,7 +204,7 @@
             // 
             this.cabNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cabNum.Location = new System.Drawing.Point(332, 11);
-            this.cabNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cabNum.Margin = new System.Windows.Forms.Padding(4);
             this.cabNum.Name = "cabNum";
             this.cabNum.Size = new System.Drawing.Size(79, 26);
             this.cabNum.TabIndex = 2;
@@ -216,7 +216,7 @@
             this.ClientSize = new System.Drawing.Size(415, 153);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MovePrinterForm";

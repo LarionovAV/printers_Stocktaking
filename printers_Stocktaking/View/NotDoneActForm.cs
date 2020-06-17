@@ -2,7 +2,6 @@
 using printers_Stocktaking.Model;
 using System;
 using System.Data.Common;
-using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;

@@ -49,7 +49,7 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -110,7 +110,7 @@
             this.tableLayoutPanel2.Controls.Add(this.cartridgeStatus, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -132,8 +132,8 @@
             // 
             this.cartridgeStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cartridgeStatus.FormattingEnabled = true;
-            this.cartridgeStatus.Location = new System.Drawing.Point(159, 7);
-            this.cartridgeStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cartridgeStatus.Location = new System.Drawing.Point(159, 8);
+            this.cartridgeStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cartridgeStatus.Name = "cartridgeStatus";
             this.cartridgeStatus.Size = new System.Drawing.Size(255, 27);
             this.cartridgeStatus.TabIndex = 1;
@@ -144,7 +144,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 100);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChangeCartridgeStatus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Изменение статуса картриджа";

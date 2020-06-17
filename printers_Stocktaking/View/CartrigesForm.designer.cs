@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -91,7 +91,7 @@
             this.tableLayoutPanel2.Controls.Add(this.SubmitFilterBtn, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
@@ -133,7 +133,7 @@
             // 
             this.StateFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.StateFilter.FormattingEnabled = true;
-            this.StateFilter.Location = new System.Drawing.Point(0, 30);
+            this.StateFilter.Location = new System.Drawing.Point(0, 31);
             this.StateFilter.Margin = new System.Windows.Forms.Padding(0);
             this.StateFilter.Name = "StateFilter";
             this.StateFilter.Size = new System.Drawing.Size(259, 27);
@@ -172,7 +172,7 @@
             // 
             this.ModelFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ModelFilter.FormattingEnabled = true;
-            this.ModelFilter.Location = new System.Drawing.Point(0, 30);
+            this.ModelFilter.Location = new System.Drawing.Point(0, 31);
             this.ModelFilter.Margin = new System.Windows.Forms.Padding(0);
             this.ModelFilter.Name = "ModelFilter";
             this.ModelFilter.Size = new System.Drawing.Size(259, 27);
@@ -200,7 +200,7 @@
             this.tableLayoutPanel6.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(271, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
@@ -213,14 +213,14 @@
             // 
             this.cartridgeTable.AllowUserToAddRows = false;
             this.cartridgeTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cartridgeTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cartridgeTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cartridgeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cartridgeTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCol,
@@ -230,7 +230,7 @@
             this.moreInfo});
             this.cartridgeTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cartridgeTable.Location = new System.Drawing.Point(4, 90);
-            this.cartridgeTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cartridgeTable.Margin = new System.Windows.Forms.Padding(4);
             this.cartridgeTable.Name = "cartridgeTable";
             this.cartridgeTable.ReadOnly = true;
             this.cartridgeTable.RowHeadersVisible = false;
@@ -278,8 +278,8 @@
             // moreInfo
             // 
             this.moreInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.moreInfo.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.moreInfo.DefaultCellStyle = dataGridViewCellStyle2;
             this.moreInfo.FillWeight = 20F;
             this.moreInfo.HeaderText = "";
             this.moreInfo.MinimumWidth = 6;
@@ -321,7 +321,7 @@
             // 
             this.searchLine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.searchLine.Location = new System.Drawing.Point(327, 6);
-            this.searchLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchLine.Margin = new System.Windows.Forms.Padding(4);
             this.searchLine.Name = "searchLine";
             this.searchLine.Size = new System.Drawing.Size(227, 26);
             this.searchLine.TabIndex = 1;
@@ -354,7 +354,7 @@
             this.ReloadCartListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReloadCartListBtn.Image = global::printers_Stocktaking.Properties.Resources.updateBtn;
             this.ReloadCartListBtn.Location = new System.Drawing.Point(57, 4);
-            this.ReloadCartListBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReloadCartListBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ReloadCartListBtn.Name = "ReloadCartListBtn";
             this.ReloadCartListBtn.Size = new System.Drawing.Size(43, 39);
             this.ReloadCartListBtn.TabIndex = 0;
@@ -368,7 +368,7 @@
             this.AddCartBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddCartBtn.Image = global::printers_Stocktaking.Properties.Resources.addBtn;
             this.AddCartBtn.Location = new System.Drawing.Point(7, 4);
-            this.AddCartBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddCartBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AddCartBtn.Name = "AddCartBtn";
             this.AddCartBtn.Size = new System.Drawing.Size(43, 39);
             this.AddCartBtn.TabIndex = 0;
@@ -382,7 +382,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "CartrigesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
